@@ -130,11 +130,11 @@ class HelloWorld {
         
     }
     static void swap(int a, int b){
-        int temp = a;
+        int temp = a;  
         a = b;
         b = temp;
-        
-        
+        // This change will only be valid in this function scope only. 
     } 
 }
-//In the above code, swapping didn't take place because 
+//In the above code, swapping didn't take place because a and b are being new object inside the swap function that's why outside of the swap method, they aren't getting swapped.
+
