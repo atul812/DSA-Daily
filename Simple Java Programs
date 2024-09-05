@@ -116,3 +116,25 @@ public class ThirdDay {
 
     }
 }
+
+
+//Swapping of two numbers
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int num1 = input.nextInt();
+        int num2 = input.nextInt();
+        swap(num1, num2);
+        System.out.println("Values of a and b are swapped which are: " + num1 + " " + num2);
+        
+    }
+    static void swap(int a, int b){
+        int temp = a;
+        a = b;
+        b = temp;
+        
+        
+    } 
+}
+//In the above code, swapping didn't take place because 
