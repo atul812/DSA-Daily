@@ -1,0 +1,25 @@
+Pattern Printing using Functions: 
+1.                   *
+                    * *
+                   * * *
+                  * * * *
+
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the rows: ");
+        int row = in.nextInt();
+        pattern(row);
+        System.out.println();
+    }
+    
+    static void pattern(int a){
+        for(int i =1; i< a; i++){
+            for(int j = 0; j<i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
