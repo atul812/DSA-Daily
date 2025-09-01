@@ -1,0 +1,14 @@
+# doing prefix suffix approach O(n)
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        prefix= [1]*n
+        suffix= [1]*n
+        leftm, rightm = 1, 1
+        for i in range(n):
+            j = -i-1
+            prefix[i]=leftm
+            suffix[j]=rightm
+            leftm = leftm * nums[i]
+            rightm = rightm * nums[j]
+        return [u*v for u, v in zip(prefix, suffix)]
