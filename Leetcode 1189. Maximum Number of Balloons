@@ -1,0 +1,12 @@
+from collections import defaultdict
+class Solution:
+    def maxNumberOfBalloons(self, text: str) -> int:
+        count = defaultdict(int)
+        stri="balloon"
+        for i in text:
+            if i in stri:
+                count[i] = count[i]+1
+        if any(i not in count for i in stri):
+            return 0
+        else:
+            return min(count['b'], count['a'], count['l']//2, count['o']//2, count['n'])
