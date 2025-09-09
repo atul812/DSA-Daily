@@ -1,0 +1,13 @@
+def convertString(str):
+    lis = list(str)
+    flag = True
+    for i in range(len(lis)):
+        if flag and lis[i].islower():
+            lis[i] = lis[i].upper()
+        if lis[i]==' ':
+            flag = True
+        else:
+            flag = False
+        
+    return ''.join(lis)
+    
