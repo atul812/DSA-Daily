@@ -1,0 +1,9 @@
+class Solution:
+    def arrayRankTransform(self, arr: List[int]) -> List[int]:
+        arr2 = sorted(set(arr))
+        dicti = {}
+        for i, val in enumerate(arr2):
+            dicti[val] = i + 1
+
+        return [dicti[x] for x in arr]
+
