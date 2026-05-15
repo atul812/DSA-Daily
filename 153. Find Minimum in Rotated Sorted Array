@@ -1,3 +1,5 @@
+# approach 1
+
 class Solution:
     def findMin(self, nums: List[int]) -> int:
         l = 0
@@ -10,3 +12,10 @@ class Solution:
             else:
                 r = mid
         return nums[l]
+
+# approach 2
+
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        nums.sort()
+        return nums[0]
